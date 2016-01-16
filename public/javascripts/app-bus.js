@@ -9,7 +9,9 @@ app.controller("SampleCtrl", function($scope, $firebaseArray) {
 
   $scope.calculateQuantity = function(busId) {
      $scope.quantityResult = "TODO ... "+busId;
-
+     ref.startAt(busId).endAt(busId).on("value", function(snapshot) {
+       console.log("???"+snapshot.key())
+     });
 
     // ref.orderByKey().startAt(busId).endAt(busId).on("value", function(snapshot) {
     //   console.log(snapshot.key()+snapshot.val());
