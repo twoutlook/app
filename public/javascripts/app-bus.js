@@ -8,8 +8,10 @@ app.controller("SampleCtrl", function($scope, $firebaseArray) {
   $scope.messages = $firebaseArray(ref);
 
   $scope.calculateQuantity = function(busId) {
-     $scope.quantityResult = "key is "+busId;
-    // ref.startAt(busId).endAt(busId).on("value", function(snapshot) {
+     $scope.quantityResult = "TODO ... "+busId;
+
+
+    // ref.orderByKey().startAt(busId).endAt(busId).on("value", function(snapshot) {
     //   console.log(snapshot.key()+snapshot.val());
     //   console.log("almost..."+snapshot.val().BusID);
     //   $scope.quantityResult = snapshot.val();
